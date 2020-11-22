@@ -1,3 +1,4 @@
+import math
 class Calculadora:
 
     factor = 1
@@ -25,6 +26,12 @@ class Calculadora:
         elif valor == 0:
             return 1
         else:
-            for i in range(1,valor + 1):
-                factor = factor*i
-            return factor
+            return math.factorial(valor)
+        # if valor < 0:
+        #     return 'None'
+        # elif valor == 0:
+        #     return 1
+        # else:
+        #     for i in range(1,valor + 1):
+        #         factor = factor*i
+        #     return factor
