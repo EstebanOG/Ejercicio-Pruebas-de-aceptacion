@@ -1,7 +1,4 @@
-import math
 class Calculadora:
-
-    factor = 1
 
     def sumar(self, valor1, valor2):
         return valor1+valor2
@@ -26,12 +23,4 @@ class Calculadora:
         elif valor == 0:
             return 1
         else:
-            return math.factorial(valor)
-        # if valor < 0:
-        #     return 'None'
-        # elif valor == 0:
-        #     return 1
-        # else:
-        #     for i in range(1,valor + 1):
-        #         factor = factor*i
-        #     return factor
+            return valor * self.factorial(valor - 1)
