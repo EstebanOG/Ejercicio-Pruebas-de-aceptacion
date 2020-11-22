@@ -1,16 +1,16 @@
 from behave import *
 from calculadora import Calculadora
 
-@given('the {values} to division')
+@given('a {values} to factorial')
 def step_imp(context, values):
     context.calculadora = Calculadora()
-    context.values = [int(x) for x in values.split(",")]
+    context.value = values
 
-@when('the calc division the values')
+@when('the calc factorial the values')
 def step_imp(context):
-    context.total = context.calculadora.dividir(context.values[0], context.values[1])
+    context.total = context.calculadora.factorial(context.value)
 
-@then('{total} of division is ok')
+@then('the {total} of factorial is ok')
 def step_imp(context, total):
     if total== 'None':
         assert(context.total == 'None')
